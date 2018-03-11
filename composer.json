@@ -1,0 +1,18 @@
+{
+    "name": "chenjianping/253",
+    "description": "创蓝253短信接口",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chenjianping",
+            "email": "553163963@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Chuanglan\\":"src/"
+        }
+    }
+}
