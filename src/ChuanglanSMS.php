@@ -13,14 +13,14 @@ class ChuanglanSMS
 {
     private $account;
     private $password;
-    private $sendUrl;
+    const SEND_URL = 'http://smssh1.253.com/msg/send/json';
 
 
-    public function __construct($account,$password,$sendUrl)
+    public function __construct($account,$password)
     {
         $this->account = $account;
         $this->password = $password;
-        $this->sendUrl = $sendUrl;
+
     }
 
     /**
@@ -41,7 +41,7 @@ class ChuanglanSMS
             'report' => $needstatus
         );
 
-        $result = $this->curlPost( $this->sendUrl , $postArr);
+        $result = $this->curlPost( self::SEND_URL , $postArr);
         return $result;
     }
 
